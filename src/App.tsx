@@ -1,11 +1,10 @@
 import './App.css'
 import { Card } from './components/Card'
 import { useFetchRepos } from './queries/repo'
+import { useFavoriteReposStore } from './store/useFavoriteRepos'
 
 function App() {
   const { data } = useFetchRepos()
-
-  console.log(data)
 
   return (
     <div className="App">
@@ -13,8 +12,9 @@ function App() {
         UI State by <code>zustand</code>; Server State by{' '}
         <code>react-query</code>
       </h1>
+
       {data?.map(repo => (
-        <Card key={repo.id} repo={repo} toggleFavoriteRepo={() => {}}></Card>
+        <Card key={repo.id} repo={repo} />
       ))}
     </div>
   )
