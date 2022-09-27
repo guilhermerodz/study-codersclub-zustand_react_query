@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card button {
+  background: rgba(255, 255, 255, 0.05);
+}
